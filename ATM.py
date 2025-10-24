@@ -1,8 +1,8 @@
 class ATM:
     def __init__(self, card_number, pin, balance):
         self.card_number = card_number
-        self.__pin = pin          # private data (hidden)
-        self.__balance = balance  # private data (hidden)
+        self.__pin = pin          
+        self.__balance = balance  
 
     # Private method to check pin
     def __verify_pin(self, pin):
@@ -13,7 +13,7 @@ class ATM:
         if self.__verify_pin(pin):
             print(f"Your Current Balance is ₹{self.__balance}")
         else:
-            print("❌ Invalid PIN")
+            print(" Invalid PIN")
 
     # Public method to withdraw money
     def withdraw(self, amount, pin):
