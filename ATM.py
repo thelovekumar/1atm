@@ -20,27 +20,27 @@ class ATM:
         if self.__verify_pin(pin):
             if amount > 0 and amount <= self.__balance:
                 self.__balance -= amount
-                print(f"✅ Withdrawal of ₹{amount} successful!")
+                print(f" Withdrawal of ₹{amount} successful!")
                 print(f"Remaining Balance: ₹{self.__balance}")
             else:
-                print("❌ Insufficient balance or invalid amount.")
+                print(" Insufficient balance or invalid amount.")
         else:
-            print("❌ Invalid PIN")
+            print(" Invalid PIN")
 
     # Public method to deposit money
     def deposit(self, amount, pin):
         if self.__verify_pin(pin):
             if amount > 0:
                 self.__balance += amount
-                print(f"✅ Deposit of ₹{amount} successful!")
+                print(f" Deposit of ₹{amount} successful!")
                 print(f"Updated Balance: ₹{self.__balance}")
             else:
-                print("❌ Invalid amount.")
+                print(" Invalid amount.")
         else:
-            print("❌ Invalid PIN")
+            print(" Invalid PIN")
 
 
-# 🔹 Using the class (simulation)
+#  Using the class (simulation)
 user1 = ATM("1234-5678-9000", 1234, 5000)
 
 # Correct PIN
